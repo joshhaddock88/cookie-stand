@@ -18,22 +18,22 @@ let hours = [
   `Total:`
 ];
 
-function randomCookies(min, max, avg) {
+function generateHourlyCookies(min, max, avg) {
   return Math.floor(avg * (Math.random() * (max - min)) + min);
 }
 
-function createArray(cityObj) {
+function getHourlyCookiesArray(city) {
   let total = 0;
   for (let i = 0; i < hours.length - 1; i++) {
-    cityObj.hourlyCookies[i] = randomCookies(cityObj.min, cityObj.max, cityObj.avg);
-    total += cityObj.hourlyCookies[i];
+    city.hourlyCookies[i] = generateHourlyCookies(city.min, city.max, city.avg);
+    total += city.hourlyCookies[i];
   }
-  cityObj.hourlyCookies[hours.length - 1] = total;
-  return cityObj.hourlyCookies;
+  city.hourlyCookies[hours.length - 1] = total;
+  return city.hourlyCookies;
 }
 
 const seattle = {
-  name: 'Seattle'
+  name: 'Seattle',
   min: 23,
   max: 65,
   avg: 6.3,
@@ -41,7 +41,7 @@ const seattle = {
 }
 
 const tokyo = {
-  name: 'Tokyo'
+  name: 'Tokyo',
   min: 3,
   max: 24,
   avg: 1.2,
@@ -49,7 +49,7 @@ const tokyo = {
 }
 
 const dubai = {
-  name: 'Dubai'
+  name: 'Dubai',
   min: 11,
   max: 38,
   avg: 3.7,
@@ -57,7 +57,7 @@ const dubai = {
 }
 
 const paris = {
-  name: 'Paris'
+  name: 'Paris',
   min: 20,
   max: 38,
   avg: 2.3,
@@ -65,7 +65,7 @@ const paris = {
 }
 
 const lima = {
-  name: 'Lima'
+  name: 'Lima',
   min: 2,
   max: 16,
   avg: 4.6,
@@ -73,20 +73,23 @@ const lima = {
 }
 
 function allCityHourlyCookies () {
-  createArray(seattle);
-  createArray(tokyo);
-  createArray(dubai);
-  createArray(paris);
-  createArray(lima);
+  getHourlyCookiesArray(seattle);
+  getHourlyCookiesArray(tokyo);
+  getHourlyCookiesArray(dubai);
+  getHourlyCookiesArray(paris);
+  getHourlyCookiesArray(lima);
 }
 
 allCityHourlyCookies();
 
+const sales = document.getElementById('sales');
+
 function makeCitySalesList(city) {
-  const sectionElem = document.createElement('section');
+  const articleElem = document.createElement('section');
+  sales.appendChild(articleElem);
 
   const ulElem = document.createElement('ul');
-  sectionElem.appendChild(ulElem);
+  articleElem.appendChild(ulElem);
 
   const h2Elem = document.createElement('h2');
   ulElem.appendChild(h2Elem);
@@ -98,3 +101,12 @@ function makeCitySalesList(city) {
     ulElem.appendChild(liElem);
   }
 }
+
+function printAllCitiesToScreen() {
+  makeCitySalesList(seattle);
+  makeCitySalesList(tokyo);
+  makeCitySalesList(dubai);
+  makeCitySalesList(paris);
+  makeCitySalesList(lima);
+}
+printAllCitiesToScreen();
