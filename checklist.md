@@ -12,12 +12,21 @@ a function to create 14 random numbers based on the min/maxes.
 a function to total those fourteen numbers.
 
 ## app.js
-- [x] create a store object
+<!-- - [x] create a store object
 - [x] create the properties for min/max hourly customers and average cookier per customer.
 - [x] create a method to generate a random number for customers per hour.
 - [x] calculate and store the simulated amounts of cookers purchased for each hour at each location using average cookier purhcased and the random number of customer generated.
 - [x] Display the values of each array as unordered lists in the broswer.
-- [x] calculate the sum of hourly totals for each store.
+- [x] calculate the sum of hourly totals for each store. -->
+
+- [ ] replace all object literals with a constructor function.
+- [ ] replace lists of data with a table.
+- [ ] each cookie stand will have seperate render().
+- [ ] The header row and footer row are each created in their own stand-alone function
+NOTE: Please use a header cell for both the header row ( containing store hours ), and the footer row ( hourly and grand totals across all stores ).
+
+I need to create a header for each index of 'Hours'.
+
 
 ## Home Page
 1. [ ] A custom Google font for highlights
