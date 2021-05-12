@@ -25,6 +25,9 @@ a function to total those fourteen numbers.
 - [ ] The header row and footer row are each created in their own stand-alone function
 NOTE: Please use a header cell for both the header row ( containing store hours ), and the footer row ( hourly and grand totals across all stores ).
 
+I need to create a header for each index of 'Hours'.
+
+
 ## Home Page
 1. [ ] A custom Google font for highlights
 2. [ ] a specified standard sans-serif web font for data.
