@@ -68,27 +68,6 @@ parisStore.setHourlyCookies();
 let limaStore = new Store ('Lima', 2, 16, 4.6, []);
 limaStore.setHourlyCookies();
 
-
-// function makeCitySalesList(store) {
-//   let name = store.name;
-//   const articleElem = document.createElement('article');
-//   articleElem.setAttribute('id', name);
-//   sales.appendChild(articleElem);
-
-//   const ulElem = document.createElement('ul');
-//   articleElem.appendChild(ulElem);
-
-//   const h2Elem = document.createElement('h2');
-//   ulElem.appendChild(h2Elem);
-//   h2Elem.textContent = store.name;
-
-//   for (let i = 0; i < hours.length; i++) {
-//     const liElem = document.createElement('li');
-//     liElem.textContent = `${hours[i]} ${store.hourlyCookies[i]}`;
-//     ulElem.appendChild(liElem);
-//   }
-// }
-
 let storesArray = [
   seattleStore,
   tokyoStore,
@@ -96,13 +75,6 @@ let storesArray = [
   parisStore,
   limaStore,
 ]
-
-// function printAllCitiesToScreen() {
-//   for(let i = 0; i < storesArray.length; i++) {
-//     makeCitySalesList(storesArray[i]);
-//   }
-// }
-// printAllCitiesToScreen();
 
 let hourlyTotals = []
 
@@ -113,7 +85,6 @@ function gethourlyTotals() { //gets hourly total across stores.
       totalHourly += storesArray[j].hourlyCookies[i];
     }
     hourlyTotals[i] = totalHourly;
-    console.log(`${hours[i]} total is ${hourlyTotals[i]}`)
   }
 }
 gethourlyTotals();
@@ -167,7 +138,6 @@ function makeFooter () {
     if (i > 0) {
       thElem.textContent = `${hourlyTotals[i - 1]}`;
       total += hourlyTotals[i - 1];
-      console.log(`Total sales are ${total}`)
     }
     trElem.appendChild(thElem);
   }
