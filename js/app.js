@@ -2,23 +2,7 @@
 
 const sales = document.getElementById('sales');
 
-let hours = [
-  `6:00am`,
-  `7:00am`,
-  `8:00am`,
-  `9:00am`,
-  `10:00am`,
-  `11:00am`,
-  `12:00pm`,
-  `1:00pm`,
-  `2:00pm`,
-  `3:00pm`,
-  `4:00pm`,
-  `5:00pm`,
-  `6:00pm`,
-  `7:00pm`,
-  `Daily Location Total`
-];
+let hours = [`6:00am`, `7:00am`, `8:00am`, `9:00am`, `10:00am`, `11:00am`, `12:00pm`, `1:00pm`, `2:00pm`, `3:00pm`, `4:00pm`, `5:00pm`, `6:00pm`, `7:00pm`, `Daily Location Total`];
 
 function generateHourlyCookies(min, max, avg) {
   return Math.floor(avg * (Math.random() * (max - min)) + min);
@@ -68,13 +52,7 @@ parisStore.setHourlyCookies();
 let limaStore = new Store ('Lima', 2, 16, 4.6, []);
 limaStore.setHourlyCookies();
 
-let storesArray = [
-  seattleStore,
-  tokyoStore,
-  dubaiStore,
-  parisStore,
-  limaStore,
-]
+let storesArray = [seattleStore, tokyoStore, dubaiStore, parisStore, limaStore]
 
 let hourlyTotals = []
 

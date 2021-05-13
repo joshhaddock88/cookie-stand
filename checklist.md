@@ -19,13 +19,13 @@ a function to total those fourteen numbers.
 - [x] Display the values of each array as unordered lists in the broswer.
 - [x] calculate the sum of hourly totals for each store. -->
 
-- [ ] replace all object literals with a constructor function.
-- [ ] replace lists of data with a table.
-- [ ] each cookie stand will have seperate render().
-- [ ] The header row and footer row are each created in their own stand-alone function
+<!-- - [x] replace all object literals with a constructor function.
+- [x] replace lists of data with a table.
+- [x] each cookie stand will have seperate render().
+- [x] The header row and footer row are each created in their own stand-alone function
 NOTE: Please use a header cell for both the header row ( containing store hours ), and the footer row ( hourly and grand totals across all stores ).
 
-I need to create a header for each index of 'Hours'.
+I need to create a header for each index of 'Hours'. -->
 
 
 ## Home Page
@@ -35,3 +35,12 @@ I need to create a header for each index of 'Hours'.
 4. [ ] Specified different font folors for all three fonts usages.
 5. [ ] A background color for the default page background (make sure colors have good contrast)
 6. [ ]A different background color for elements, such as boxes and tables.
+
+Lab-08
+1. [ ] list of locations with addresses
+2. [ ] hours open
+3. [ ] contact information
+4. [ ] merchandise.
+5. [ ] about.
+5. [ ] link to sales.html
+6. [ ] link from sales .html to index.html
