@@ -29,18 +29,18 @@ I need to create a header for each index of 'Hours'. -->
 
 
 ## Home Page
-1. [ ] A custom Google font for highlights
-2. [ ] a specified standard sans-serif web font for data.
-3. [ ] A specified stand serif web font for text.
-4. [ ] Specified different font folors for all three fonts usages.
-5. [ ] A background color for the default page background (make sure colors have good contrast)
-6. [ ]A different background color for elements, such as boxes and tables.
+1. [x] A custom Google font for highlights
+2. [x] a specified standard sans-serif web font for data.
+3. [x] A specified stand serif web font for text.
+4. [x] Specified different font folors for all three fonts usages.
+5. [x] A background color for the default page background (make sure colors have good contrast)
+6. [x]A different background color for elements, such as boxes and tables.
 
-Lab-08
-1. [ ] list of locations with addresses
-2. [ ] hours open
-3. [ ] contact information
-4. [ ] merchandise.
-5. [ ] about.
-5. [ ] link to sales.html
-6. [ ] link from sales .html to index.html
+<!-- Lab-08
+1. [x] list of locations with addresses
+2. [x] hours open
+3. [x] contact information
+4. [x] merchandise.
+5. [x] about.
+5. [x] link to sales.html
+6. [x] link from sales .html to index.html -->
