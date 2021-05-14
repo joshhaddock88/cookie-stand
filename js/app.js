@@ -3,7 +3,7 @@
 const sales = document.getElementById('sales');
 const formElem = document.getElementById('addStore');
 
-let hours = [`6:00am`, `7:00am`, `8:00am`, `9:00am`, `10:00am`, `11:00am`, `12:00pm`, `1:00pm`, `2:00pm`, `3:00pm`, `4:00pm`, `5:00pm`, `6:00pm`, `7:00pm`, `Daily Location Total`];
+let hours = [`6:00am`, `7:00am`, `8:00am`, `9:00am`, `10:00am`, `11:00am`, `12:00pm`, `1:00pm`, `2:00pm`, `3:00pm`, `4:00pm`, `5:00pm`, `6:00pm`, `7:00pm`, `Daily Total`];
 
 let storesArray = [];
 
@@ -39,7 +39,7 @@ Store.prototype.createGridRow = function () {
   sales.appendChild(trElem);
   const thElem = document.createElement('th');
   trElem.appendChild(thElem);
-  thElem.textContent = `${this.name}`;
+  thElem.textContent = `${this.name}:`;
   for (let i = 0; i < hours.length; i++) {
     const tdElem = document.createElement('td');
     trElem.appendChild(tdElem);
@@ -111,7 +111,7 @@ function makeFooter () {
   for (let i = 0; i < hours.length; i++) {
     const thElem = document.createElement('th');
     trElem.appendChild(thElem);
-    thElem.textContent = `Totals`;
+    thElem.textContent = `Totals:`;
     if (i > 0) {
       thElem.textContent = `${hourlyTotals[i - 1]}`;
       total += hourlyTotals[i - 1];

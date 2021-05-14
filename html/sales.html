@@ -3,33 +3,45 @@
   <head>
     <link href="../css/reset.css" rel="stylesheet" type="text/css"/>
     <link href="../css/salesStyle.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&family=Raleway&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header><img src="../img/salmon.png"/></header>
+    <main>
     <section>
-      <form id="addStore">
-        <fieldset>
-          <legend>Add Or Update Stores</legend>
-          <label>Store City
-            <input type="text" name="name">
-          </label>
-          <label>Minimum Customers
-            <input type="number" name="min">
-          </label>
-          <label>Maximum Customers
-            <input type="number" name="max">
-          </label>
-          <label>Average Cookie Per Customer
-            <input type="number" name="avg">
-          </label>
-          <button type="submit">Submit Info</button>
-        </fieldset>
-      </form>
-    </section>
-    <section>
-      <table id="sales">
-      </table>
-      <a href="../index.html">Back</a>
-    </section>
+        <form id="addStore">
+          <fieldset>
+            <legend>Add Or Update Stores</legend>
+            <p><b>To Update:</b> Simply type the name of the existing city, then fill in the new numbers and submit. <br> <b>To Add:</b> Simply fill out the form and submit.</p>
+            <label>Store City
+              <input type="text" name="name">
+            </label>
+            <label>Minimum Customers
+              <input type="number" name="min">
+            </label>
+            <label>Maximum Customers
+              <input type="number" name="max">
+            </label>
+            <label>Average Cookie Per Customer
+              <input type="number" name="avg">
+            </label>
+            <button type="submit">Submit Info</button>
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <table id="sales">
+        </table>
+        <a href="../index.html">Back</a>
+      </section>
+    </main>
+    <footer>
+      <a>Company</a>
+      <a>Work</a>
+      <img src="../img/salmon.png"/>
+      <a>Connect</a>
+      <a>Customer Service</a>
+    </footer>
     <script src="../js/app.js"></script>
   </body>
 </html>
