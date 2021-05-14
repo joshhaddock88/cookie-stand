@@ -1,7 +1,7 @@
 'use strict'
 // --------------------------------------------- Global Variables -------------------------------------------------------//
 const sales = document.getElementById('sales');
-const formElem = document.getElementById('addStore')
+const formElem = document.getElementById('addStore');
 
 let hours = [`6:00am`, `7:00am`, `8:00am`, `9:00am`, `10:00am`, `11:00am`, `12:00pm`, `1:00pm`, `2:00pm`, `3:00pm`, `4:00pm`, `5:00pm`, `6:00pm`, `7:00pm`, `Daily Location Total`];
 
@@ -136,11 +136,21 @@ function handleSubmit(event) {
   let min = Number(event.target.min.value);
   let max = Number(event.target.max.value);
   let avg = Number(event.target.avg.value);
-
-  let newStore = new Store(name, min, max, avg, []);
-  console.log(newStore.min);
-  setAllHourlyCookies(storesArray);
-  printGrid();
+  if (name && min && max && avg) {
+    let newStore = new Store(name, min, max, avg, []);
+    for(let i = 0; i < storesArray.length - 1; i++) {
+      if(newStore.name.toLowerCase() === storesArray[i].name.toLowerCase()) {
+        storesArray[i].min = newStore.min;
+        storesArray[i].max = newStore.max;
+        storesArray[i].avg = newStore.avg;
+        storesArray.pop();
+      }
+    }
+    sales.innerHTML = '';
+    setAllHourlyCookies(storesArray);
+    printGrid();
+    event.target.reset();
+  }
 }
 
 // --------------------------------------------- Event Listeners -------------------------------------------------------//
